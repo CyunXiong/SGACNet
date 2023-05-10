@@ -1,1 +1,1 @@
-# Spatial-information-Guided-Adaptive-Context-aware-Network-for-Efficient-RGB-D-Semantic-Segmentation
+# SGACNet:Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation
