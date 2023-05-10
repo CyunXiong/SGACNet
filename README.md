@@ -1,1 +1,54 @@
 # SGACNet:Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation
+This repository contains the code to our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" ([arXiv]()).
+## Citations
+>Yang Zhang, Chenyun Xiong, Junjie Liu, Xuhui Ye, and Guodong Sun. Spatial-information Guided Adaptive Context-aware Network for Efficient RGBD Semantic Segmentation[J]. IEEE Sensors Journal, 2023.
+## Installation
+### 1.Clone repository:
+Please be navigate to the cloned directory.
+```
+git clone --recursive https://github.com/CyunXiong/SGACNet.git
+cd /path/to/this/repository
+```
+### 2.Create conda environment and install all dependencies:
+Note we are using python 3.7+. Torch 1.3.1 and torchvision 0.4.2
+```
+conda env create -f rgbd_segmentation.yaml
+conda activate SGACNet
+```
+### 3. Data Preparation
+We trained our networks on [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), [SUNRGB-D](https://rgbd.cs.princeton.edu/), and [Cityscapes](https://www.cityscapes-dataset.com/). And they are stored in ```<dir>/datasets```.
+### 4.Download pre-trained ImageNet models
+Pre-trained ImageNet models can be downloaded for our selected [ResNet34-NBt1D]() backbones on the above datasets. Stored in ```<dir>/trained_models/imagenet```.
+>* Note that we reported the inference time for all datasets in our paper.
+## Training
+Use ```main.py``` to train SGACNet on NYUv2, SUNRGB-D and Cityscapes. Otherwise, you can use imagenet_pretraining.py to create your own pretrained weights.
+
+Example: 
+
+* Train our full multi-task EMSANet-R34-NBt1D on NYUv2: 
+```
+python train.py \
+    --dataset nyuv2 \
+    --dataset_dir ./datasets/nyuv2 \
+    --pretrained_dir ./trained_models/imagenet \
+    --results_dir ./results \
+    --height 480 \
+    --width 640 \
+    --batch_size 16 \
+    --batch_size_valid 24 \
+    --lr 0.01 \
+    --optimizer SGD \
+    --class_weighting median_frequency \
+    --encoder resnet34 \
+    --encoder_block NonBottleneck1D \
+    --nr_decoder_blocks 3 \
+    --modality rgbd \
+    --encoder_decoder_fusion add \
+    --context_module ppm \
+    --decoder_channels_mode decreasing \
+    --fuse_depth_in_rgb_encoder SE-add \
+    --upsampling learned-3x3-zeropad
+```
+## Evaluation
+To reproduce the metrics reported in our paper, use ```eval.py```.
+
