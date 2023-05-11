@@ -25,8 +25,10 @@ Use ```main.py``` to train SGACNet on NYUv2, SUNRGB-D and Cityscapes. Otherwise,
 
 Example: 
 
-* Train our full multi-task EMSANet-R34-NBt1D on NYUv2: 
+* Train our SGACNet on NYUv2: 
+> Run ```sh train_nyu.sh(train_sunrgbd.sh/train_cityscapes.sh)```.
 ```
+#train_nyu.sh
 python train.py \
     --dataset nyuv2 \
     --dataset_dir ./datasets/nyuv2 \
@@ -49,6 +51,52 @@ python train.py \
     --fuse_depth_in_rgb_encoder SE-add \
     --upsampling learned-3x3-zeropad
 ```
+> Note that the some parameters are different in Cityscapes.
 ## Evaluation
-To reproduce the metrics reported in our paper, use ```eval.py```.
+To reproduce the metrics reported in our paper, run ```sh eval.sh ```.
+Example: 
+
+* To evaluate our SGACNet trained on NYUv2, use:
+```
+# eval_nyuv.sh
+python eval.py \
+    --dataset nyuv2 \
+    --dataset_dir ./datasets/nyuv2 \
+    --ckpt_path ./results/nyuv2/ckpt_epoch_best.pth
+   ```
+ > Evaluation on SUN RGB-D is similar to NYUv2.
+ 
+* To evaluate our SGACNet trained on Cityscapes, use:
+ ```
+# eval_city.sh
+  python eval.py \
+    --dataset cityscapes-with-depth \
+    --dataset_dir ./datasets/cityscapes \
+    --ckpt_path ./trained_models/cityscapes/ckpt_epoch_best.pth \
+    --height 512 \
+    --width 1024 \
+    --raw_depth \
+    --context_module appm-1-2-4-8 \
+    --valid_full_res 
+  ```
+## Time Inference 
+We timed the inference on a single NVIDIA RTX 3090Ti with CUDA 11.7.
+Example: 
+* To reproduce the timings of our SGACNet trained on NYUv2, run eval_nyuv.sh:
+ ```
+ python3 ./inference_time_whole_model.py \
+    --dataset nyuv2 \
+    --no_time_pytorch \
+    --no_time_tensorrt \
+    --trt_floatx 16 \
+    --plot_timing \
+    --plot_outputs \
+    --export_outputs
+ ```
+
+
+
+
+
+
 
