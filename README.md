@@ -2,21 +2,21 @@
 This repository contains the code to our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" ([arXiv]()).
 
 ## Model Zoo
-###Validation on NYUDv2
+### Validation on NYUDv2
 
 |           Backbone         |   PixAcc    |    mAcc     |    mIoU    | Input |  Model | 
 | :------------------------: | :---------: | :---------: | :--------: | :---: |  :---: | 
 |      **ResNet18-NBt1D**    |    74.6     |    61.8     |    48.2    | RGBD  | [model]() |
 |      **ResNet34-NBt1D**    |    75.6     |    62.7     |    49.4    | RGBD  | [model]() | 
 
-###Validation on SUN RGB-D
+### Validation on SUN RGB-D
 
 |           Backbone         |   PixAcc    |    mAcc     |    mIoU    | Input |  Model | 
 | :------------------------: | :---------: | :---------: | :--------: | :---: |  :---: | 
 |      **ResNet18-NBt1D**    |    81.0     |    57.8     |    46.5    | RGBD  | [model]() |
 |      **ResNet34-NBt1D**    |    81.2     |    60.8     |    47.8    | RGBD  | [model]() | 
 
-###Validation on Cityscapes
+### Validation on Cityscapes
 
 |           Backbone         |   Params    |  mIoU.half  |  mIoU.full | Input |  Model | 
 | :------------------------: | :---------: | :---------: | :--------: | :---: |  :---: | 
