@@ -1,6 +1,8 @@
 # SGACNet:Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation
-This repository contains the code to our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" ([arXiv]()).
-
+This repository contains the code to our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" 
+```
+#([arXiv]()).
+```
 ## Model Zoo
 ### Validation on NYUDv2
 
