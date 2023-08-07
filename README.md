@@ -1,5 +1,5 @@
-# SGACNet:Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation
-This repository contains the code to our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" .
+# SGACNet: Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation
+This repository contains the code for our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" .
 
 ## Model Zoo
 ### Validation on NYUDv2
@@ -24,35 +24,33 @@ This repository contains the code to our paper "Spatial-information Guided Adapt
 |      **ResNet34-NBt1D**    |    35.6     |    74.1     |    79.7    | RGBD  | [model]() | 
 
 
-
-
-
 ## Citations
 >Yang Zhang, Chenyun Xiong, Junjie Liu, Xuhui Ye, and Guodong Sun. Spatial-information Guided Adaptive Context-aware Network for Efficient RGBD Semantic Segmentation[J]. IEEE Sensors Journal, 2023.
+
 ## Installation
-### 1.Clone repository:
-Please be navigate to the cloned directory.
+### 1. Clone repository:
+Please navigate to the cloned directory.
 ```
 git clone --recursive https://github.com/CyunXiong/SGACNet.git
 cd /path/to/this/repository
 ```
-### 2.Create conda environment and install all dependencies:
-Note we are using python 3.7+. Torch 1.3.1 and torchvision 0.4.2
+### 2.Create a conda environment and install all dependencies:
+Note we are using Python 3.7+. Torch 1.3.1 and torchvision 0.4.2
 ```
 conda env create -f rgbd_segmentation.yaml
 conda activate SGACNet
 ```
+
 ### 3. Data Preparation
 We trained our networks on [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), [SUNRGB-D](https://rgbd.cs.princeton.edu/), and [Cityscapes](https://www.cityscapes-dataset.com/). And they are stored in ```<dir>/datasets```.
+
 ### 4. Download pre-trained ImageNet models
 [ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012) can be downloaded for our selected backbones on the above datasets. Stored in ```<dir>/trained_models/imagenet```.
-
 >* Note that we reported the inference time for all datasets in our paper.
+
 ## Training
-Use ```main.py``` to train SGACNet on NYUv2, SUNRGB-D and Cityscapes. Otherwise, you can use imagenet_pretraining.py to create your own pretrained weights.
-
+Use ```main.py``` to train SGACNet on NYUv2, SUNRGB-D, and Cityscapes. Otherwise, you can use imagenet_pretraining.py to create your own pre-trained weights.
 Example: 
-
 * Train our SGACNet on NYUv2: 
 > Run ```sh train_nyu.sh(train_sunrgbd.sh/train_cityscapes.sh)```.
 ```
@@ -79,7 +77,7 @@ python train.py \
     --fuse_depth_in_rgb_encoder SE-add \
     --upsampling learned-3x3-zeropad
 ```
-> Note that the some parameters are different in Cityscapes.
+> Note that some parameters are different in Cityscapes.
 ## Evaluation
 To reproduce the metrics reported in our paper, run ```sh eval.sh ```.
 Example: 
@@ -107,6 +105,7 @@ python eval.py \
     --context_module appm-1-2-4-8 \
     --valid_full_res 
   ```
+
 ## Time Inference 
 We timed the inference on a single NVIDIA RTX 3090Ti with CUDA 11.7.
 Example: 
