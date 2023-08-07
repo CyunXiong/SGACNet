@@ -2,8 +2,9 @@
 This repository contains the code for our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" .
 
 ## Model Zoo
+We provide the weights for our selected ESANet-R34-NBt1D (with ResNet34 NBt1D backbones) on NYUv2, SunRGBD, and Cityscapes. Download and extract the models to `./trained_models`.
 ### Validation on NYUDv2
-
+ 
 |           Backbone         |   PixAcc    |    mAcc     |    mIoU    | Input |  Model | 
 | :------------------------: | :---------: | :---------: | :--------: | :---: |  :---: | 
 |      **ResNet18-NBt1D**    |    74.6     |    61.8     |    48.2    | RGBD  | [model]() |
@@ -42,17 +43,17 @@ conda activate SGACNet
 ```
 
 ### 3. Data Preparation
-We trained our networks on [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), [SUNRGB-D](https://rgbd.cs.princeton.edu/), and [Cityscapes](https://www.cityscapes-dataset.com/). And they are stored in ```<dir>/datasets```.
+We trained our networks on [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), [SUNRGB-D](https://rgbd.cs.princeton.edu/), and [Cityscapes](https://www.cityscapes-dataset.com/). And they are stored in `<dir>/datasets`.
 
 ### 4. Download pre-trained ImageNet models
-[ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012) can be downloaded for our selected backbones on the above datasets. Stored in ```<dir>/trained_models/imagenet```.
+[ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012) can be downloaded for our selected backbones on the above datasets. Stored in `<dir>/trained_models/imagenet`.
 >* Note that we reported the inference time for all datasets in our paper.
 
 ## Training
-Use ```main.py``` to train SGACNet on NYUv2, SUNRGB-D, and Cityscapes. Otherwise, you can use imagenet_pretraining.py to create your own pre-trained weights.
+Use `main.py` to train SGACNet on NYUv2, SUNRGB-D, and Cityscapes. Otherwise, you can use imagenet_pretraining.py to create your own pre-trained weights.
 Example: 
 * Train our SGACNet on NYUv2: 
-> Run ```sh train_nyu.sh(train_sunrgbd.sh/train_cityscapes.sh)```.
+> Run `sh train_nyu.sh(train_sunrgbd.sh/train_cityscapes.sh)`.
 ```
 #train_nyu.sh
 python train.py \
