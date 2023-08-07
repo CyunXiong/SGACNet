@@ -37,7 +37,7 @@ cd /path/to/this/repository
 ### 2.Create a conda environment and install all dependencies:
 Note we are using Python 3.7+. Torch 1.3.1 and torchvision 0.4.2
 ```
-conda env create -f rgbd_segmentation.yaml
+conda env create -f rgbd_segmentation1.yaml
 conda activate SGACNet
 ```
 
