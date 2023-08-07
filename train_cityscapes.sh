@@ -1,0 +1,26 @@
+CUDA_VISIBLE_DEVICES=0   python train.py \
+        --dataset cityscapes-with-depth \
+        --dataset_dir ./datasets/cityscapes \
+        --pretrained_dir ./trained_models/imagenet \
+        --results_dir ./results \
+        --raw_depth \
+        --he_init \
+        --aug_scale_min 0.5 \
+        --aug_scale_max 2.0 \
+        --valid_full_res \
+        --height 512 \
+        --width 1024 \
+        --batch_size 8 \
+        --batch_size_valid 16 \
+        --lr 1e-4 \
+        --optimizer Adam \
+        --class_weighting None \
+        --encoder resnet34 \
+        --encoder_block NonBottleneck1D \
+        --nr_decoder_blocks 3 \
+        --modality rgbd \
+        --encoder_decoder_fusion add \
+        --context_module appm-1-2-4-8 \
+        --decoder_channels_mode decreasing \
+        --fuse_depth_in_rgb_encoder SE-add \
+        --upsampling bilinear
