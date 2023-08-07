@@ -44,8 +44,9 @@ conda activate SGACNet
 ```
 ### 3. Data Preparation
 We trained our networks on [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), [SUNRGB-D](https://rgbd.cs.princeton.edu/), and [Cityscapes](https://www.cityscapes-dataset.com/). And they are stored in ```<dir>/datasets```.
-### 4.Download pre-trained ImageNet models
-Pre-trained ImageNet models can be downloaded for our selected [ResNet34-NBt1D]() backbones on the above datasets. Stored in ```<dir>/trained_models/imagenet```.
+### 4. Download pre-trained ImageNet models
+[ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012) can be downloaded for our selected backbones on the above datasets. Stored in ```<dir>/trained_models/imagenet```.
+
 >* Note that we reported the inference time for all datasets in our paper.
 ## Training
 Use ```main.py``` to train SGACNet on NYUv2, SUNRGB-D and Cityscapes. Otherwise, you can use imagenet_pretraining.py to create your own pretrained weights.
