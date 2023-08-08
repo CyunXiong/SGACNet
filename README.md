@@ -25,9 +25,6 @@ We provide the weights for our selected ESANet-R34-NBt1D (with ResNet34 NBt1D ba
 |      **ResNet34-NBt1D**    |    35.6     |    74.1     |    79.7    | RGBD  | [model]() | 
 
 
-## Citations
->Yang Zhang, Chenyun Xiong, Junjie Liu, Xuhui Ye, and Guodong Sun. Spatial-information Guided Adaptive Context-aware Network for Efficient RGBD Semantic Segmentation[J]. IEEE Sensors Journal, 2023.
-
 ## Installation
 ### 1. Clone repository:
 Please navigate to the cloned directory.
@@ -122,7 +119,8 @@ Example:
     --export_outputs
  ```
 
-
+## Citations
+>Yang Zhang, Chenyun Xiong, Junjie Liu, Xuhui Ye, and Guodong Sun. Spatial-information Guided Adaptive Context-aware Network for Efficient RGBD Semantic Segmentation[J]. IEEE Sensors Journal, 2023.
 
 
 
