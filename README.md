@@ -1,6 +1,6 @@
 # SGACNet: Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation
 This repository contains the code for our paper "Spatial-information Guided Adaptive Context-aware Network for Efficient RGB-D Semantic Segmentation" .
-![Image text](https://github.com/CyunXiong/SGACNet/blob/main/Fig.1.png)
+![Overview](https://github.com/CyunXiong/SGACNet/blob/main/Fig.1.png)
 ## Model Zoo
 We provide the weights for our selected ESANet-R34-NBt1D (with ResNet34 NBt1D backbones) on NYUv2, SunRGBD, and Cityscapes. Download and extract the models to `./trained_models`.
 ### Validation on NYUDv2
