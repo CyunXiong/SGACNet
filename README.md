@@ -14,8 +14,8 @@ We provide the weights for our selected ESANet-R34-NBt1D (with ResNet34 NBt1D ba
 
 |           Backbone         |   PixAcc    |    mAcc     |    mIoU    | Input |  Model | 
 | :------------------------: | :---------: | :---------: | :--------: | :---: |  :---: | 
-|      **ResNet18-NBt1D**    |    81.0     |    57.8     |    46.5    | RGBD  | [model]() |
-|      **ResNet34-NBt1D**    |    81.2     |    60.8     |    47.8    | RGBD  | [model]() | 
+|      **ResNet18-NBt1D**    |    81.0     |    57.8     |    46.5    | RGBD  | [model](https://drive.google.com/file/d/1GTakFof944NGPScnbVfdeBoC7ocKhWmB/view?usp=drive_link) |
+|      **ResNet34-NBt1D**    |    81.2     |    60.8     |    47.8    | RGBD  | [model](https://drive.google.com/file/d/1u-cGgUhbWgv3VwbmbpLAKHkVdjhONBAw/view?usp=drive_link) | 
 
 ### Validation on Cityscapes
 
