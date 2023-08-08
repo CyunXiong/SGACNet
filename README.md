@@ -21,8 +21,8 @@ We provide the weights for our selected ESANet-R34-NBt1D (with ResNet34 NBt1D ba
 
 |           Backbone         |   Params    |  mIoU.half  |  mIoU.full | Input |  Model | 
 | :------------------------: | :---------: | :---------: | :--------: | :---: |  :---: | 
-|      **ResNet18-NBt1D**    |    22.1     |    73.3     |    78.7    | RGBD  | [model]() |
-|      **ResNet34-NBt1D**    |    35.6     |    74.1     |    79.7    | RGBD  | [model]() | 
+|      **ResNet18-NBt1D**    |    22.1     |    73.3     |    78.7    | RGBD  | [model](https://drive.google.com/file/d/13X001qXVJJacDA76A3PxmfX59PCot7KR/view?usp=drive_link) |
+|      **ResNet34-NBt1D**    |    35.6     |    74.1     |    79.7    | RGBD  | [model](https://drive.google.com/file/d/1rZ42ChB6ZOtgaCpcPt_Nn8819oO7_eCo/view?usp=drive_link) | 
 
 
 ## Installation
