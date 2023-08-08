@@ -83,21 +83,19 @@ Example:
 
 * To evaluate our SGACNet trained on NYUv2, use:
 ```
-# eval_nyuv.sh
 python eval.py \
     --dataset nyuv2 \
     --dataset_dir ./datasets/nyuv2 \
-    --ckpt_path ./results/nyuv2/ckpt_epoch_best.pth
+    --ckpt_path ./trained_models/nyuv2/nyuv2_r34_NBt1D/r34_NBt1D.pth
    ```
  > Evaluation on SUN RGB-D is similar to NYUv2.
  
 * To evaluate our SGACNet trained on Cityscapes, use:
  ```
-# eval_city.sh
   python eval.py \
     --dataset cityscapes-with-depth \
     --dataset_dir ./datasets/cityscapes \
-    --ckpt_path ./trained_models/cityscapes/ckpt_epoch_best.pth \
+    --ckpt_path ./trained_models/cityscapes/cityscapes_r34_NBt1D_half/r34_NBt1D_half \
     --height 512 \
     --width 1024 \
     --raw_depth \
