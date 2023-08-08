@@ -41,6 +41,7 @@ conda activate SGACNet
 
 ### 3. Data Preparation
 We trained our networks on [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), [SUNRGB-D](https://rgbd.cs.princeton.edu/), and [Cityscapes](https://www.cityscapes-dataset.com/). And they are stored in `<dir>/datasets`.
+You can also choose the folder [`src/datasets`](src/datasets) which contains the code to prepare NYUv2, SunRGB-D, and Cityscapes for training and evaluation. Please follow the instructions given for the respective dataset and store the created datasets. 
 
 ### 4. Download pre-trained ImageNet models
 [ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012) can be downloaded for our selected backbones on the above datasets. Stored in `<dir>/trained_models/imagenet`.
