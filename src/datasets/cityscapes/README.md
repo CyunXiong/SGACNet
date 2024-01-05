@@ -15,7 +15,7 @@ For more details, see: [Cityscapes Dataset](https://www.cityscapes-dataset.com/)
 2. Download and unzip dataset files:  
     Use `csDownload` or download the files mentioned below manually from: [Cityscapes Dataset Downloads](https://www.cityscapes-dataset.com/downloads/)
     ```bash
-    CITYSCAPES_DOWNLOAD_DIR="/home/yzhang/ESANet/datasets/Cityscapes"
+    CITYSCAPES_DOWNLOAD_DIR="/home/yzhang/SGACNet/datasets/Cityscapes"
    
     # using cityscapesScripts
     # use "csDownload -l" to list available packages
@@ -30,13 +30,13 @@ For more details, see: [Cityscapes Dataset](https://www.cityscapes-dataset.com/)
     csDownload camera_trainvaltest.zip -d $CITYSCAPES_DOWNLOAD_DIR    # -> 2MB
    
     # unzip files
-    find /home/yzhang/ESANet/datasets/Cityscapes -name '*.zip' -exec unzip -o {} -d /home/yzhang/ESANet/datasets/Cityscapes \;
+    find /home/yzhang/SGACNet/datasets/Cityscapes -name '*.zip' -exec unzip -o {} -d /home/yzhang/SGACNet/datasets/Cityscapes \;
     ```
 
 3. Convert dataset:
     ```bash
     # cd to this directory
-    python prepare_dataset.py ../../../datasets/cityscapes home/yzhang/ESANet/datasets/Cityscapes
+    python prepare_dataset.py ../../../datasets/cityscapes home/yzhang/SGACNet/datasets/Cityscapes
     ```
 
 ## Use dataset
