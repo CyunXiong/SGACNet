@@ -16,7 +16,7 @@ from src.models.model_utils import ConvBNAct, Swish, Hswish, \
 from src.models.model import Decoder
 
 
-class ESANetOneModality(nn.Module):
+class SGACNetOneModality(nn.Module):
     def __init__(self,
                  height=480,
                  width=640,
@@ -35,7 +35,7 @@ class ESANetOneModality(nn.Module):
                  nr_decoder_blocks=None,  # default: [1, 1, 1]
                  weighting_in_encoder='None',
                  upsampling='bilinear'):
-        super(ESANetOneModality, self).__init__()
+        super(SGACNetOneModality, self).__init__()
 
         if channels_decoder is None:
             channels_decoder = [128, 128, 128]
@@ -197,7 +197,7 @@ def main():
     """
     Useful to check if model is built correctly.
     """
-    model = ESANetOneModality()
+    model = SGACNetOneModality()
     print(model)
 
     model.eval()
