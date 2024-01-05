@@ -16,7 +16,7 @@ For more details, see: [SceneNet RGB-D](https://robotvault.bitbucket.io/scenenet
     # see: https://robotvault.bitbucket.io/scenenet-rgbd.html
     
     SCENENETRGBD_DOWNLOAD_DIR="/path/where/to/store/scenenetrgbd_dowloads"
-    # SCENENETRGBD_DOWNLOAD_DIR="/home/yzhang/ESANet/datasets/scenenetrgbd"
+    # SCENENETRGBD_DOWNLOAD_DIR="/home/yzhang/SGACNet/datasets/scenenetrgbd"
     # train
     wget https://www.doc.ic.ac.uk/~bjm113/scenenet_data/SceneNet-train.tar.gz -P ${SCENENETRGBD_DOWNLOAD_DIR}   # -> 263GB
     wget https://www.doc.ic.ac.uk/~bjm113/scenenet_data/train_protobufs.tar.gz -P ${SCENENETRGBD_DOWNLOAD_DIR}    # -> 323MB
