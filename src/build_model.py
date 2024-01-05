@@ -9,7 +9,7 @@ import torch
 from torch import nn
 
 from src.models.model import SGACNet
-from src.models.model_one_modality import ESANetOneModality
+from src.models.model_one_modality import SGACNetOneModality
 from src.models.resnet import ResNet
 
 
@@ -45,7 +45,7 @@ def build_model(args, n_classes):
         if args.encoder_depth in [None, 'None']:
             args.encoder_depth = args.encoder
 
-        model = ESANet(
+        model = SGACNet(
             height=args.height,
             width=args.width,
             num_classes=n_classes,
@@ -69,7 +69,7 @@ def build_model(args, n_classes):
         else:  # depth only
             input_channels = 1
 
-        model = ESANetOneModality(
+        model = SGACNetOneModality(
             height=args.height,
             width=args.width,
             pretrained_on_imagenet=pretrained_on_imagenet,
